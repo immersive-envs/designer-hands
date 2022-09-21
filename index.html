@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>3D hand Design toolkit</title>
+    <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.3/control_utils_3d.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="demo.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.3/control_utils_3d.js" crossorigin="anonymous"></script> -->
+  <!-- The control_utils_3d is modified for use -->
+  <script src="control_utils_3d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <style>
+    .square-box {
+      width: 20%;
+      height: 40%;
+      padding-top: 10%;
+      position: absolute;
+      right: 50px;
+      top: 30px;
+      background-color: rgba(0, 255, 255, 0);
+      border: 5px solid grey;
+
+    }
+
+    .landmark-grid-container {
+      height: 50%;
+      width: 256px;
+      position: absolute;
+      top:0;
+      left:0;
+      background-color: rgba(177, 153, 157, 0.611);
+    }
+  </style>
+
+  <div id="leftcontainer" style="border:6px solid rgba(98, 98, 107, 0.749);position:relative;
+            background-color: grey; left:50px; top:30px; width:408px; height:600px;">
+    <div class="container">
+      <video class="input_video"></video>
+      <canvas class="output_canvas" width="640px" height="640px"></canvas>
+      <div class="loading">
+        <div class="spinner"></div>
+        <div class="message">
+          Loading
+        </div>
+      </div>
+    </div>
+    
+    <div class="buttons" style ="position:relative; top:10px;">
+      <div class="'action_btn">
+        <button name="submitPose" class="action_btn pose">Record Pose</button>
+        <button name="submitMove" class="action_btn movement">Record Movement</button>
+        <button name="submitRedo" class="action_btn redo" disabled>Redo</button>
+      </div>
+    </div>
+
+    <div class="control-panel">
+    </div>
+
+  </div>
+
+  <div id = "vm" class="vertical-menu" style="border:6px solid rgba(98, 98, 107, 0.749);position:absolute;
+  background-color: grey; left:500px; top:30px; width:420px; height:600px; overflow-y: auto;">
+    <ul id="thelist" style="list-style: none">
+    </ul>
+  </div>
+  
+  <div class='square-box'>
+    <div class="landmark-grid-container">
+    </div>
+    <div id="webgl" style ="top:70px;position:relative;"></div>
+  </div>
+
+  <div class='SubmitBtn' style="border:6px solid rgba(98, 98, 107, 0.749);position:absolute;
+  background-color: grey; right:50px; top:450px; width:253px; height:180px;">
+    <button name="ClearAll" disabled style="position:relative;left: 26px;top: 20px;width: 200px; height:60px;">Clear All</button>
+    <button name="Save" disabled style="position:relative;left: 26px;top: 40px;width: 200px; height:60px">Save Design</button>
+  </div>
+  
+  
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
