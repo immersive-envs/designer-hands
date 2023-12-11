@@ -19,7 +19,9 @@ applications.
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -47,7 +49,30 @@ For getting your hands on the Designer Hands, please make sure you have a device
 
 Cameras with higher resolution, more FPS (30fps+), and higher dynamic range is always a good bonus to the using experience.
 
-### Installation
+### Configuration
+
+#### Frontend
+
+Download and install Node.js@v18.17.0 from https://nodejs.org/dist/v18.17.0/win-x64/node.exe
+
+Please make sure npm has the following packages installed:
+- archiver@5.3.1
+- electron@20.0.2
+- file-saver@2.0.5
+- image-data-uri@2.0.1
+- immediate@3.0.6
+- jszip@3.10.1 
+- lie@3.3.0
+- setimmediate@1.0.5
+- pako@1.0.11
+- three@0.144.0
+- webcamjs@1.0.26
+This can be done through:
+```
+npm install PACKAGE_NAME@VERSION
+```
+
+#### Backend
 
 Download and install Node.js@v18.17.0 from https://nodejs.org/dist/v18.17.0/win-x64/node.exe
 
