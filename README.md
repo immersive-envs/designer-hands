@@ -99,3 +99,6 @@ npm start
 The directory DesignJson contains the saved gesture's hand joint 3D coordinates.
 The directory HandPoseMesh contains the saved gesture's static hand shape mesh (showed on GUI for review).
 The directory img contains the saved gesture's captured hand shape picture from camera stream.
+
+## License
+This project is under Apache License 2.0.
