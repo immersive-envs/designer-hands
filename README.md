@@ -97,16 +97,23 @@ Followed by the frontend:
 npm start
 ```
 The **DesignJson** directory contains the saved gesture's hand joint 3D coordinates.
+
 The **HandPoseMesh** directory contains the saved gesture's static hand shape mesh (showed on GUI for review).
+
 The **img** directory contains the saved gesture's captured hand shape picture from camera stream.
+
+
 
 The **test/test.py** responsible for hand gesture similarity comparisons between two designs, which can be run by:
  ```
 python test.py --mode ? --first ? --second ? --threshold?
 ```
 **Mode** for hand pose design similarity check: 'PC-PC' (default) for two PC tool designed hand poses, 'AR-PC' for a hololens captured hand pose and a PC designed.
+
 **First** for the first designed pose file directory.
+
 **Second** for the second designed pose file directory.
+
 **Threshold** for defining hand pose matching acceptance rate (default to 0.9).
 
 ## License
