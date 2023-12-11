@@ -39,7 +39,7 @@ applications.
 - Experiment evaluated effiency.
 
 ## Getting Started
-Devices with 16GB RAM, 3.8GHz hexa-core CPU, GTX1070Max-Q above are recommended (guarantees solid 30fps realtime design experience).
+Devices with 16GB RAM, 3.8GHz hexa-core CPU, GTX1070Max-Q above are recommended for decent realtime design experience.
 
 ### Prerequisites
 *A WORKING RGB CAMERA IS COMPULSORY!*
