@@ -41,4 +41,19 @@ applications.
 Devices with 16GB RAM, 3.8GHz hexa-core CPU, GTX1070Max-Q above are recommended (guarantees solid 30fps realtime design experience).
 
 ### Prerequisites
-For getting your hands on the Designer Hands, please make sure you have a device that has a nvidia CUDA GPU equipped. It is used for the backend hand mesh generation (we are currently working on the Docker version which aims for deployment in the server environment.)
+For getting your hands on the Designer Hands, please make sure you have a device that has a nvidia CUDA GPU equipped. It is used for the backend hand mesh generation (we are currently working on the Docker version which aims for deployment in the server environment.) Currently, our backend is only supported on Windows (suggests Windows 10) & Linux(Ubuntu, Debian). **A WORKING RGB CAMERA IS COMPULSORY!** The camera with higher resolution, more FPS (30fps+), and higher dynamic range is always a good bonus to the using experience.
+
+Our cuurent release's frontend is developed with Node.js@v18.8.0
+
+Please make sure npm has the following packages installed:
+- archiver@5.3.1
+- electron@20.0.2
+- file-saver@2.0.5
+- image-data-uri@2.0.1
+- immediate@3.0.6
+- jszip@3.10.1 
+- lie@3.3.0
+- setimmediate@1.0.5
+- pako@1.0.11
+- three@0.144.0
+- webcamjs@1.0.26
