@@ -73,22 +73,18 @@ npm install PACKAGE_NAME@VERSION
 ```
 
 #### Backend
+The Backend is designed base on IntagHand(https://github.com/Dw1010/IntagHand). However, the setup procedures are different due to the changes and optimizations made for supporting front-end features and inferencing effiency.
 
-Download and install Node.js@v18.17.0 from https://nodejs.org/dist/v18.17.0/win-x64/node.exe
+Create a python virtual environment with conda:
+```
+Conda create -n Designer_hand python=3.8
+```
 
-Please make sure npm has the following packages installed:
-- archiver@5.3.1
-- electron@20.0.2
-- file-saver@2.0.5
-- image-data-uri@2.0.1
-- immediate@3.0.6
-- jszip@3.10.1 
-- lie@3.3.0
-- setimmediate@1.0.5
-- pako@1.0.11
-- three@0.144.0
-- webcamjs@1.0.26
-This can be done through:
-```
-npm install PACKAGE_NAME@VERSION
-```
+Please make sure the following packages are installed:
+- pytorch 1.12.0+cu116
+- torchvision 0.13.0+cu116
+- pytorch3D
+- Opencv-python
+- tqdm
+- yacs >= 0.1.8
+
