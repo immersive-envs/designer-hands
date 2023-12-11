@@ -63,3 +63,7 @@ Please make sure npm has the following packages installed:
 - pako@1.0.11
 - three@0.144.0
 - webcamjs@1.0.26
+This can be done through:
+```
+npm install PACKAGE_NAME@VERSION
+```
