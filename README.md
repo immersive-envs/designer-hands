@@ -23,9 +23,7 @@ applications.
     - [Frontend](#frontend)
     - [Backend](#backend)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -80,7 +78,7 @@ Create a python virtual environment with conda:
 Conda create -n Designer_hand python=3.8
 ```
 
-Please make sure the following packages are installed:
+Please make sure the following packages are installed in the virtual environment Designer_hand:
 - pytorch 1.12.0+cu116
 - torchvision 0.13.0+cu116
 - pytorch3D
@@ -88,3 +86,16 @@ Please make sure the following packages are installed:
 - tqdm
 - yacs >= 0.1.8
 
+## Usage
+Start the backend within the Designer_hand virtual environment:
+```
+Conda activate Designer_hand
+python IntagHand/simplified.py
+```
+Followed by the frontend:
+```
+npm start
+```
+The directory DesignJson contains the saved gesture's hand joint 3D coordinates.
+The directory HandPoseMesh contains the saved gesture's static hand shape mesh (showed on GUI for review).
+The directory img contains the saved gesture's captured hand shape picture from camera stream.
