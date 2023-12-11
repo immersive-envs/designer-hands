@@ -23,6 +23,7 @@ applications.
     - [Frontend](#frontend)
     - [Backend](#backend)
 - [Usage](#usage)
+- [Pics](#pics)
 - [License](#license)
 
 ## Features
@@ -81,7 +82,7 @@ Conda create -n Designer_hand python=3.8
 Please make sure the following packages are installed in the virtual environment Designer_hand:
 - pytorch 1.12.0+cu116
 - torchvision 0.13.0+cu116
-- pytorch3D
+- pytorch3D 0.7.0
 - Opencv-python
 - tqdm
 - yacs >= 0.1.8
@@ -115,6 +116,11 @@ python test.py --mode ? --first ? --second ? --threshold ?
 **Second** for the second designed pose file directory.
 
 **Threshold** for defining hand pose matching acceptance rate (default to 0.9).
+
+## Pics
+![Screenshot 2023-12-12 052906](https://github.com/immersive-envs/designer-hands/assets/22673200/5efcdc99-7ab7-44b5-bf47-4dda6973601b)
+
+![Screenshot 2023-12-12 053029](https://github.com/immersive-envs/designer-hands/assets/22673200/be3eca35-1629-4847-9ac2-e88e21f7549f)
 
 ## License
 This project is under Apache License 2.0.
