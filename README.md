@@ -106,7 +106,7 @@ The **img** directory contains the saved gesture's captured hand shape picture f
 
 The **test/test.py** responsible for hand gesture similarity comparisons between two designs, which can be run by:
  ```
-python test.py --mode ? --first ? --second ? --threshold?
+python test.py --mode ? --first ? --second ? --threshold ?
 ```
 **Mode** for hand pose design similarity check: 'PC-PC' (default) for two PC tool designed hand poses, 'AR-PC' for a hololens captured hand pose and a PC designed.
 
