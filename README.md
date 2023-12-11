@@ -47,7 +47,9 @@ For getting your hands on the Designer Hands, please make sure you have a device
 
 Cameras with higher resolution, more FPS (30fps+), and higher dynamic range is always a good bonus to the using experience.
 
-Our cuurent release's frontend is developed with Node.js@v18.8.0
+### Installation
+
+Download and install Node.js@v18.17.0 from https://nodejs.org/dist/v18.17.0/win-x64/node.exe
 
 Please make sure npm has the following packages installed:
 - archiver@5.3.1
