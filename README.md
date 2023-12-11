@@ -16,7 +16,6 @@ applications.
 
 ## Table of Contents
 
-- [About](#about)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -26,22 +25,20 @@ applications.
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
-## About
-
-Provide a more detailed overview of your project. Include information about its purpose, main features, and any other relevant details.
-
 ## Features
 
-List the key features of your project. You can use bullet points for better readability.
-
-- Feature 1
-- Feature 2
-- Feature 3
+- Static hand gesture design mesh generation.
+- Static hand gesture design joint coordinates data generation.
+- Static hand gesture design RGB photo output.
+- Real-time hand gesture movement coordination recording.
+- Flexibility of combining hand shape/movements in the hand gesture design.
+- User friendly GUI design.
+- Individually-deployable frontend & backend design (backend cloud deploy potential)
+- Wide frontend compatability thanks to Nodejs & Electron (Windows, MacOS, Ubuntu, Web...)
+- Experiment evaluated effiency.
 
 ## Getting Started
-
-Explain how someone can get started with your project. This can include installation instructions, prerequisites, and any other relevant information.
+Devices with 16GB RAM, 3.8GHz hexa-core CPU, GTX1070Max-Q above are recommended (guarantees solid 30fps realtime design experience).
 
 ### Prerequisites
-
-List any dependencies or prerequisites that users need to have before they can use your project.
+For getting your hands on the Designer Hands, please make sure you have a device that has a nvidia CUDA GPU equipped. It is used for the backend hand mesh generation (we are currently working on the Docker version which allows easy deploy in server environment.)
