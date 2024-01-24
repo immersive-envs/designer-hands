@@ -20,8 +20,8 @@ applications.
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Configuration](#configuration)
-    - [Frontend](#frontend)
     - [Backend](#backend)
+    - [Frontend](#frontend)
 - [Usage](#usage)
 - [Pics](#pics)
 - [License](#license)
@@ -50,39 +50,85 @@ Cameras with higher resolution, more FPS (30fps+), and higher dynamic range is a
 
 ### Configuration
 
+First, run the Designer Hand backend by following the instructions below.
+
+First, clone the designer-hands repository (master) to your computer. Then, open the Windows Terminal (Windows PowerShell) and navigate inside the 'designer-hands' directory.
+
+```
+cd designer-hands
+```
+
+#### Backend
+
+The Backend is designed base on IntagHand(https://github.com/Dw1010/IntagHand). However, the setup procedures are different due to the changes and optimizations made for supporting front-end features and inferencing effiency.
+
+This setup is developed using Python version 3.8. If you do not have Python 3.8 installed, please follow this link https://www.python.org/downloads/release/python-380/ to download and install Python 3.8 on your Windows 10 OS. If you are unsure whether you have Python 3.8 installed, you can use the `py --list` command in the Windows Terminal to see the available Python versions.
+
+We recommend creating a Python virtual environment by following the instructions below:
+
+```
+py -3.8 -m venv designer_hands_env
+```
+
+Afterwards, activate the new virtual environment by using the following command:
+
+```
+.\designer_hands_env\Scripts\activate
+```
+
+Next, install PyTorch 1.12.0 with CUDA 11.6 support, torchvision 0.13.0 with CUDA 11.6 support, and PyTorch3D 0.7.0 using the following commands:
+
+```
+pip install torch==1.12.0 torchvision==0.13.0 --index-url https://download.pytorch.org/whl/cu116 
+
+pip install 'git+https://github.com/facebookresearch/pytorch3d.git@v0.7.0' 
+```
+
+Then install the following packages inside the 'designer_hands_env' virtual environment:
+
+```
+pip install tqdm  
+pip install yacs>=0.1.8 
+pip install Opencv-python 
+pip install plotly
+pip install chumpy 
+pip install scipy
+```
+Ensure that your numpy and scipy versions match the following. If not, run the following commands:
+
+```
+pip install --upgrade numpy==1.23.1
+pip install --upgrade scipy==1.11.4
+```
+
+If everything works fine up to this point, execute the following two commands to start the backend:
+
+```
+cd IntagHand
+python .\IntagHand\simplifed.py
+```
+
 #### Frontend
 
 If Node.js is not installed on your computer, please visit https://nodejs.org/dist/v18.17.0/, download node-v18.17.0-x64.msi, and follow the GUI instructions of the installer to install Node.js version 18.17.0.
 
 All the required Node.js packages are listed in the package.json. Thus, after installing Node.js, go to the 'designer-hand' directory and run the `npm update` command. When you run npm update, npm will look at the dependencies listed inside package.json file and check for newer versions that still satisfy the version constraints (if any) specified for each dependency. After that, run ```npm start```.
 
-#### Backend
-The Backend is designed base on IntagHand(https://github.com/Dw1010/IntagHand). However, the setup procedures are different due to the changes and optimizations made for supporting front-end features and inferencing effiency.
-
-Create a python virtual environment with conda:
-```
-Conda create -n Designer_hand python=3.8
-```
-
-Please make sure the following packages are installed in the virtual environment Designer_hand:
-- pytorch 1.12.0+cu116
-- torchvision 0.13.0+cu116
-- pytorch3D 0.7.0
-- Opencv-python
-- tqdm
-- yacs >= 0.1.8
-
 ## Usage
+
 Start the backend within the Designer_hand virtual environment:
+
 ```
-Conda activate Designer_hand
+.\designer_hands_env\Scripts\activate
 cd IntagHand
-python IntagHand/simplified.py
+python .\IntagHand\simplifed.py
 ```
+
 Followed by the frontend:
 ```
 npm start
 ```
+
 The **DesignJson** directory contains the saved gesture's hand joint 3D coordinates.
 
 The **HandPoseMesh** directory contains the saved gesture's static hand shape mesh (showed on GUI for review).
