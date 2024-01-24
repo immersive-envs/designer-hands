@@ -91,6 +91,7 @@ Please make sure the following packages are installed in the virtual environment
 Start the backend within the Designer_hand virtual environment:
 ```
 Conda activate Designer_hand
+cd IntagHand
 python IntagHand/simplified.py
 ```
 Followed by the frontend:
