@@ -18,6 +18,21 @@ from dataset.dataset_utils import IMG_SIZE
 from core.test_utils import InterRender
 
 if __name__ == '__main__':
+    # Define the directory path
+    base_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+    # List of directories to create
+    directories_to_create = ["img", "handPoseMesh", "DesignJson"]
+
+    # Loop through the directories and create them if they don't exist
+    for directory in directories_to_create:
+        path = os.path.join(base_directory, directory)
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Directory '{directory}' created at '{path}'")
+        else:
+            print(f"Directory '{directory}' already exists at '{path}'")
+
     # Parse arguments (Not need to set)
     parser = argparse.ArgumentParser()
     parser.add_argument("--cfg", type=str, default='misc/model/config.yaml')
