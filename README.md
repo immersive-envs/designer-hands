@@ -52,24 +52,9 @@ Cameras with higher resolution, more FPS (30fps+), and higher dynamic range is a
 
 #### Frontend
 
-Download and install Node.js@v18.17.0 from https://nodejs.org/dist/v18.17.0/win-x64/node.exe
+If Node.js is not installed on your computer, please visit https://nodejs.org/dist/v18.17.0/, download node-v18.17.0-x64.msi, and follow the GUI instructions of the installer to install Node.js version 18.17.0.
 
-Please make sure npm has the following packages installed:
-- archiver@5.3.1
-- electron@20.0.2
-- file-saver@2.0.5
-- image-data-uri@2.0.1
-- immediate@3.0.6
-- jszip@3.10.1 
-- lie@3.3.0
-- setimmediate@1.0.5
-- pako@1.0.11
-- three@0.144.0
-- webcamjs@1.0.26
-This can be done through:
-```
-npm install PACKAGE_NAME@VERSION
-```
+All the required Node.js packages are listed in the package.json. Thus, after installing Node.js, go to the 'designer-hand' directory and run the `npm update` command. When you run npm update, npm will look at the dependencies listed inside package.json file and check for newer versions that still satisfy the version constraints (if any) specified for each dependency. After that, run ```npm start```.
 
 #### Backend
 The Backend is designed base on IntagHand(https://github.com/Dw1010/IntagHand). However, the setup procedures are different due to the changes and optimizations made for supporting front-end features and inferencing effiency.
