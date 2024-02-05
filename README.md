@@ -155,4 +155,4 @@ python test.py --mode ? --first ? --second ? --threshold ?
 ![Screenshot 2023-12-12 053029](https://github.com/immersive-envs/designer-hands/assets/22673200/be3eca35-1629-4847-9ac2-e88e21f7549f)
 
 ## License
-This project is under Apache License 2.0.
+This project is under MIT License.
